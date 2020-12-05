@@ -6,7 +6,9 @@ import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -93,9 +95,10 @@ public class myRecipeController implements Initializable{
 	}
 	
 	
-	public void myRecipesSearchPushed() {
+	public void myRecipesSearchPushed() throws FileNotFoundException {
 		
-		String recipes = "Your recipes are:";
+		
+		/*String recipes = "Your recipes are:";
 		
 		recipes += "\nOld Fashion";
 		recipes += "\nMargarita";
@@ -103,7 +106,27 @@ public class myRecipeController implements Initializable{
 		recipes += "\nDaiquiri";
 		recipes += "\nManhattan";
 		
-		this.myRecipeLabel.setText(recipes);
+		
+		this.myRecipeLabel.setText(recipes);*/
+		
+		File file = new File("C:\\Users\\Diego Sanchez\\Documents\\Cs 151\\151 proj.txt");
+		Scanner scan = new Scanner(file);
+		
+		String name = "Your recipes are:";
+		
+
+		scan.nextLine();
+		while(scan.hasNext()) {
+			
+			name += "\n" + scan.nextLine();
+		}
+		
+		
+		
+		
+		this.myRecipeLabel.setText(name);
+		
+		
 	}
 	
 	

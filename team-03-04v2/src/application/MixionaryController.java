@@ -33,7 +33,7 @@ public class MixionaryController implements Initializable{
 	}
 	
 	
-public void changeSceneWhenPushed2(ActionEvent event) throws IOException{
+	public void settingsWhenPushed2(ActionEvent event) throws IOException{
 		
 		
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Settings.fxml"));
@@ -41,6 +41,20 @@ public void changeSceneWhenPushed2(ActionEvent event) throws IOException{
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root1));  
 		stage.show();
+		
+	}
+	
+	
+	public void loginWhenPushed3(ActionEvent event) throws IOException{
+		
+		
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("Login.fxml"));
+		Scene myRecipeViewScene = new Scene (myRecipeView);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		
+		window.setScene(myRecipeViewScene);
+		window.show();
 		
 	}
 	

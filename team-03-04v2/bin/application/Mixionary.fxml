@@ -176,7 +176,7 @@
       </AnchorPane>
       <TextField layoutX="52.0" layoutY="233.0" prefHeight="25.0" prefWidth="546.0" />
       <Button defaultButton="true" layoutX="601.0" layoutY="233.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Search" textFill="#4c8fd2" />
-      <Button layoutX="532.0" layoutY="82.0" mnemonicParsing="false" onAction="#changeSceneWhenPushed2" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Settings" textFill="#ebab52">
+      <Button layoutX="532.0" layoutY="82.0" mnemonicParsing="false" onAction="#settingsWhenPushed2" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Settings" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>
@@ -184,7 +184,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="1508.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
+      <Button layoutX="677.0" layoutY="81.0" mnemonicParsing="false" onAction="#loginWhenPushed3" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>
