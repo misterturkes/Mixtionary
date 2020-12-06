@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1715.0" style="-fx-background-color: #1b1b1b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopularRecipesController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1105.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" rotate="103.1">
+         <image>
+            <Image url="@umbrp.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1250.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" style="-fx-background-color: #292929;" text="My Recipes" textFill="#ebab52">
+         <font>
+            <Font name="Constantia Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="1383.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" style="-fx-background-color: #292929;" text="Settings" textFill="#ebab52">
+         <font>
+            <Font name="Constantia Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="1489.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
+         <font>
+            <Font name="Constantia Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="153.0" layoutY="52.0" mnemonicParsing="false" onAction="#changeSceneWhenPushed" style="-fx-background-color: #1b1b1b;" text="Mixionary" textFill="#ebab52">
+         <font>
+            <Font name="Georgia" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="184.0" fitWidth="184.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mixionary.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="246.0" layoutY="148.0" prefHeight="738.0" prefWidth="1238.0" style="-fx-background-color: #2a515b;">
+         <children>
+            <TableView fx:id="tableview" layoutX="80.0" layoutY="141.0" prefHeight="576.0" prefWidth="1057.0" style="-fx-background-color: #516172;">
+              <columns>
+                <TableColumn fx:id="rank" minWidth="40.0" prefWidth="70.0" text="Popularity" />
+                <TableColumn fx:id="name" prefWidth="200.0" text="Name" />
+                  <TableColumn fx:id="main" prefWidth="120.0" text="Main Drink" />
+                  <TableColumn fx:id="taste" prefWidth="100.0" text="Taste" />
+                  <TableColumn fx:id="rating" prefWidth="90.0" text="Rating -/10" />
+                  <TableColumn fx:id="save" prefWidth="75.0" text="Save" />
+                  <TableColumn fx:id="image" prefWidth="200.0" text="Image (User Upload)" />
+                  <TableColumn fx:id="upload" prefWidth="100.0" text="Uploaded By" />
+                  <TableColumn fx:id="share" prefWidth="100.0" text="Share" />
+              </columns>
+            </TableView>
+            <Pane layoutX="34.0" layoutY="9.0" prefHeight="75.0" prefWidth="492.0">
+               <children>
+                  <Text fill="#ebab52" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trending Drinks" wrappingWidth="491.99997869320214">
+                     <font>
+                        <Font name="Georgia" size="44.0" />
+                     </font>
+                  </Text>
+                  <Pane layoutX="-33.0" layoutY="59.0" prefHeight="5.0" prefWidth="1237.0" style="-fx-background-color: #ebab52;" />
+               </children>
+            </Pane>
+            <Text fill="#ebab52" layoutX="80.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search box" wrappingWidth="491.99997869320214">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="filterField" layoutX="177.0" layoutY="108.0" prefHeight="5.0" prefWidth="364.0" />
+            <Label fx:id="newCocktail" layoutX="80.0" layoutY="125.0" prefHeight="17.0" prefWidth="36.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
