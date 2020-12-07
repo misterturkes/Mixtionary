@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Cocktails {    
+	//initialize cocktail subcategories
     private  final SimpleIntegerProperty rank;
     private  final SimpleStringProperty name;
     private  final SimpleStringProperty main;
@@ -13,6 +14,7 @@ public class Cocktails {
     private  final SimpleStringProperty image;
     private  final SimpleStringProperty upload;
     private  final SimpleStringProperty share;
+    
     
     Cocktails(Integer rankNum, String nameDrink, String mainDrink, String tasteDrink, Integer ratingNum, String saveCheck, String imageUp, String uploadBy, String shareUrl)
     {      
@@ -28,10 +30,12 @@ public class Cocktails {
     
     }
     
+    //getter 
     public int getRank() {
         return rank.get();
     }
-
+    
+    //setter
     public void setRank(int id) {
         this.rank.set(id);
     }

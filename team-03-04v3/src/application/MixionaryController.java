@@ -14,54 +14,60 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MixionaryController implements Initializable{
 
-	// Enables the "My Recipes" button in the Mixionary.fxml to change scenes to myRecipe.fxml
+	@FXML private TextField searchTextField;
+	@FXML private Label searchLabel;
+	
+	// When Mixionary button is clicked, takes you to Mixionary main menu
+	public void changeSceneWhenPushed3(ActionEvent event) throws IOException{
+		
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("Mixionary.fxml"));
+		Scene myRecipeViewScene = new Scene (myRecipeView);
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setMaximized(true);
+		window.setScene(myRecipeViewScene);
+		window.show();
+	}
+	// When my recipe button is clicked, takes you to my recipe
 	public void changeSceneWhenPushed(ActionEvent event) throws IOException{
 		
 		Parent myRecipeView = FXMLLoader.load(getClass().getResource("myRecipe.fxml"));
 		Scene myRecipeViewScene = new Scene (myRecipeView);
-		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setMaximized(true);
 		window.setScene(myRecipeViewScene);
 		window.show();
 		
 	}
-	
+	// When settings button is clicked, takes you to settings
 	public void settingsWhenPushed2(ActionEvent event) throws IOException{
-		
-		
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Settings.fxml"));
 		Parent root1 = (Parent) fxmlLoader.load();
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root1));  
 		stage.show();
-		
 	}
 	
-
-	
+	// When my log out button is clicked, takes you to the log in page
 	public void logInWhenPushed(ActionEvent event) throws IOException{
-		
 		Parent myRecipeView = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		Scene myRecipeViewScene = new Scene (myRecipeView);
-		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setMaximized(true);
 		window.setScene(myRecipeViewScene);
 		window.show();
-		
 	}
 
-	public void whenBarIsPushed(ActionEvent event) throws IOException{
-		
-		Parent myRecipeView = FXMLLoader.load(getClass().getResource("MyBar.fxml"));
+	// When my Bar button is clicked, takes you to the my Bar page	
+	public void searchIsPushed(ActionEvent event) throws IOException{
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("MyBar2.fxml"));
 		Scene myRecipeViewScene = new Scene (myRecipeView);
-		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setMaximized(true);
 		window.setScene(myRecipeViewScene);
@@ -69,17 +75,38 @@ public class MixionaryController implements Initializable{
 		
 	}
 	
+	// When my Popular Recipe button is clicked, takes you to the Popular Recipe page
 	public void whenPopularPushed(ActionEvent event) throws IOException{
-		
 		Parent myRecipeView = FXMLLoader.load(getClass().getResource("PopularRecipes.fxml"));
 		Scene myRecipeViewScene = new Scene (myRecipeView);
-		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setMaximized(true);
 		window.setScene(myRecipeViewScene);
 		window.show();
 		
 	}
+	
+	// When my search button is clicked, search what was typed
+	public void changeSceneWhenSearched(ActionEvent event) throws IOException{
+		if(searchTextField.getText() != null && searchTextField.getText().equalsIgnoreCase("white russian")) {
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("Search.fxml"));
+		Scene myRecipeViewScene = new Scene (myRecipeView);
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setMaximized(true);
+		window.setScene(myRecipeViewScene);
+		window.show();
+		}
+		else {
+			
+			Parent myRecipeView = FXMLLoader.load(getClass().getResource("Error.fxml"));
+			Scene myRecipeViewScene = new Scene (myRecipeView);	
+			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+			window.setMaximized(true);
+			window.setScene(myRecipeViewScene);
+			window.show();
+			}
+		}
+		
 	
 	
 

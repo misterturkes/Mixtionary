@@ -20,7 +20,7 @@
             <Image url="@umbrp.png" />
          </image>
       </ImageView>
-      <Button layoutX="1250.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" style="-fx-background-color: #292929;" text="My Recipes" textFill="#ebab52">
+      <Button layoutX="1250.0" layoutY="61.0" mnemonicParsing="false" onAction="#changeSceneWhenPushed2" opacity="0.73" style="-fx-background-color: #292929;" text="My Recipes" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>
@@ -28,7 +28,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="1383.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" style="-fx-background-color: #292929;" text="Settings" textFill="#ebab52">
+      <Button layoutX="1383.0" layoutY="61.0" mnemonicParsing="false" onAction="#settingsWhenPushed2" opacity="0.73" style="-fx-background-color: #292929;" text="Settings" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>
@@ -36,7 +36,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="1489.0" layoutY="61.0" mnemonicParsing="false" opacity="0.73" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
+      <Button layoutX="1489.0" layoutY="61.0" mnemonicParsing="false" onAction="#logInWhenPushed" opacity="0.73" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>

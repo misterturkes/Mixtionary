@@ -26,7 +26,7 @@ public class LogginController implements Initializable{
 	
 	
 	
-	// Enables the "My Recipes" button in the Mixionary.fxml to change scenes to myRecipe.fxml
+	// changes scene from log in to Mixionary when successfully entering the user and password
 	public void changeSceneWhenPushed(ActionEvent event) throws IOException{
 		
 		

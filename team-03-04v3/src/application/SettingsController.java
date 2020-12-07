@@ -19,32 +19,43 @@ import javafx.stage.Stage;
 
 public class SettingsController implements Initializable{
 
-    public void start(Stage primaryStage) {
-        try {
-            AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("myRecipe.fxml"));
-            Scene scene = new Scene(root,400,400);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setMaximized(true);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-	
+    	
 	// Enables the "My Recipes" button in the Mixionary.fxml to change scenes to myRecipe.fxml
 	public void changeSceneWhenPushed(ActionEvent event) throws IOException{
 		
-		/*Parent myRecipeView = FXMLLoader.load(getClass().getResource("Mixionary.fxml"));
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("Mixionary.fxml"));
 		Scene myRecipeViewScene = new Scene (myRecipeView);
 		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		
+		window.setMaximized(true);
 		window.setScene(myRecipeViewScene);
-		window.show();*/
+		window.show();
 		
 
+		
+	}
+	
+	public void changeSceneWhenPushed2(ActionEvent event) throws IOException{
+		
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("myRecipe.fxml"));
+		Scene myRecipeViewScene = new Scene (myRecipeView);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setMaximized(true);
+		window.setScene(myRecipeViewScene);
+		window.show();
+		
+	}
+	
+	public void logInWhenPushed(ActionEvent event) throws IOException{
+		
+		Parent myRecipeView = FXMLLoader.load(getClass().getResource("Login.fxml"));
+		Scene myRecipeViewScene = new Scene (myRecipeView);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setMaximized(true);
+		window.setScene(myRecipeViewScene);
+		window.show();
 		
 	}
 

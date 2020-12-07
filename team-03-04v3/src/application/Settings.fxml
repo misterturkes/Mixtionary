@@ -16,14 +16,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="800.0" style="-fx-background-color: #1b1b1b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MixionaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="800.0" style="-fx-background-color: #1b1b1b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
    <children>
       <ImageView fitHeight="135.0" fitWidth="99.0" layoutX="695.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" rotate="73.7">
          <image>
             <Image url="@umbr.png" />
          </image>
       </ImageView>
-      <Button layoutX="543.0" layoutY="40.0" mnemonicParsing="false" onAction="#changeSceneWhenPushed" opacity="0.73" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #292929;" text="My Recipes" textFill="#ebab52">
+      <Button layoutX="543.0" layoutY="40.0" mnemonicParsing="false" onAction="#changeSceneWhenPushed2" opacity="0.73" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #292929;" text="My Recipes" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>
@@ -31,11 +31,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Text fill="#ebab52" layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mixionary" textAlignment="CENTER" wrappingWidth="412.13677978515625">
+      <Button layoutX="114.0" layoutY="25.0" mnemonicParsing="false" onAction="#changeSceneWhenPushed" style="-fx-background-color: #1b1b1b;" text="Mixionary" textFill="#ebab52">
          <font>
             <Font name="Georgia" size="36.0" />
          </font>
-      </Text>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <Button layoutX="417.0" layoutY="40.0" mnemonicParsing="false" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Settings" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
@@ -44,7 +47,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="676.0" layoutY="39.0" mnemonicParsing="false" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
+      <Button layoutX="676.0" layoutY="39.0" mnemonicParsing="false" onAction="#logInWhenPushed" opacity="0.73" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #292929;" text="Log Out" textFill="#ebab52">
          <font>
             <Font name="Constantia Bold Italic" size="18.0" />
          </font>
