@@ -92,7 +92,7 @@
       </ImageView>
       <Accordion layoutX="883.0" layoutY="183.0">
          <panes>
-          <TitledPane collapsible="false" style="-fx-background-color: #f39d34;" text="Add Recipe" textFill="#801313">
+          <TitledPane style="-fx-background-color: #f39d34;" text="Add Recipe" textFill="#801313">
                <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="587.0" prefWidth="564.0" style="-fx-background-color: #f39d34;">
                      <children>
